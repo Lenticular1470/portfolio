@@ -1,0 +1,114 @@
+/* General Styling */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+  background: #0d0d0d;
+}
+
+/* Animated Background */
+.animated-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(270deg, #6f00ff, #00d4ff, #ff0099, #00ff88);
+  background-size: 800% 800%;
+  z-index: -1;
+  animation: gradientMove 15s ease infinite;
+  filter: blur(100px);
+  opacity: 0.6;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 80px 20px 30px;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: #ccc;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Sections */
+section {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(0, 0, 0, 0.6);
+  margin: 20px auto;
+  border-radius: 20px;
+  max-width: 900px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+/* Projects */
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  margin-top: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #00d4ff;
+  font-weight: 600;
+  border: 1px solid #00d4ff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.project-card a:hover {
+  background: #00d4ff;
+  color: #000;
+}
+
+/* Contact */
+.contact-links a {
+  display: inline-block;
+  margin: 10px 15px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.contact-links a:hover {
+  color: #00d4ff;
+  border-bottom: 2px solid #00d4ff;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px 10px;
+  color: #aaa;
+  font-size: 0.9rem;
+}
