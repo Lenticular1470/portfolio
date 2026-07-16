@@ -58,35 +58,217 @@ section {
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
 }
 
-/* Projects */
+/* Projects Section */
+.projects {
+  padding: 60px 20px !important;
+}
+
+.projects h2 {
+  margin-bottom: 40px;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 .project-card {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 25px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  padding: 30px;
   border-radius: 15px;
-  margin-top: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+  border-color: rgba(0, 212, 255, 0.5);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.project-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  margin: 0 0 15px 0;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.project-card p {
+  flex-grow: 1;
+  margin: 0 0 20px 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #ddd;
 }
 
 .project-card a {
-  display: inline-block;
-  margin-top: 10px;
+  align-self: flex-start;
   text-decoration: none;
   color: #00d4ff;
   font-weight: 600;
-  border: 1px solid #00d4ff;
-  padding: 8px 16px;
+  border: 2px solid #00d4ff;
+  padding: 10px 20px;
   border-radius: 8px;
   transition: all 0.3s ease;
+  font-size: 0.95rem;
 }
 
 .project-card a:hover {
   background: #00d4ff;
   color: #000;
+  transform: translateX(5px);
+}
+
+/* Automation Platform Section */
+.automation-platform {
+  padding: 60px 20px !important;
+}
+
+.platform-description {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #ddd;
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+.key-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.feature-badge {
+  background: rgba(0, 212, 255, 0.15);
+  border: 1px solid rgba(0, 212, 255, 0.4);
+  color: #00d4ff;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.feature-badge:hover {
+  background: rgba(0, 212, 255, 0.25);
+  border-color: rgba(0, 212, 255, 0.6);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 212, 255, 0.2);
+}
+
+.automation-platform h3 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+}
+
+.screenshots-scroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px 0;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.screenshots-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.screenshots-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.screenshots-scroll::-webkit-scrollbar-thumb {
+  background: #00d4ff;
+  border-radius: 10px;
+}
+
+.screenshots-scroll::-webkit-scrollbar-thumb:hover {
+  background: #00b8d4;
+}
+
+.screenshot-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 30px;
+  border-radius: 15px;
+  min-width: 280px;
+  flex-shrink: 0;
+  text-align: left;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.screenshot-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+  border-color: rgba(0, 212, 255, 0.5);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.screenshot-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(135deg, #00d4ff, #6f00ff);
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.screenshot-card h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.screenshot-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #bbb;
+  line-height: 1.5;
+}
+
+.screenshot-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 15px;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.screenshot-card:hover img {
+  border-color: rgba(0, 212, 255, 0.6);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+}
+
+.deployment-note {
+  margin-top: 40px;
+  font-size: 0.95rem;
+  color: #00d4ff;
+  font-weight: 500;
 }
 
 /* Contact */
@@ -111,4 +293,151 @@ footer {
   padding: 30px 10px;
   color: #aaa;
   font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .tagline {
+    font-size: 0.95rem;
+  }
+
+  section {
+    padding: 40px 15px;
+  }
+
+  .projects-container {
+    gap: 20px;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+
+  .project-icon {
+    font-size: 2rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .key-features {
+    gap: 10px;
+  }
+
+  .feature-badge {
+    font-size: 0.85rem;
+    padding: 8px 14px;
+  }
+
+  .screenshot-card {
+    padding: 20px;
+  }
+
+  .screenshot-card img {
+    height: 180px;
+  }
+
+  .screenshot-num {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+
+  .screenshot-card h4 {
+    font-size: 0.95rem;
+  }
+
+  .screenshot-card p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 50px 15px 20px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .tagline {
+    font-size: 0.85rem;
+  }
+
+  section {
+    padding: 30px 10px;
+    margin: 10px auto;
+  }
+
+  .projects-container {
+    gap: 15px;
+  }
+
+  .project-card {
+    padding: 15px;
+  }
+
+  .project-icon {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  .project-card h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .project-card p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .project-card a {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+
+  .key-features {
+    gap: 8px;
+  }
+
+  .feature-badge {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+
+  .screenshot-card {
+    min-width: 220px;
+    padding: 15px;
+  }
+
+  .screenshot-card img {
+    height: 150px;
+  }
+
+  .screenshot-num {
+    width: 35px;
+    height: 35px;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+
+  .screenshot-card h4 {
+    font-size: 0.9rem;
+  }
+
+  .screenshot-card p {
+    font-size: 0.75rem;
+  }
+
+  .contact-links a {
+    margin: 8px 10px;
+    font-size: 0.9rem;
+  }
 }
